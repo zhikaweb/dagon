@@ -1,0 +1,200 @@
+@import "colors";
+@import "fonts";
+
+body {
+  background: $bg-body;
+}
+
+aside {
+  background: $bg-aside;
+  padding: 2rem !important;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+
+//header
+.main-menu {
+  margin: 1rem 0;
+
+  &__menu ul li {
+    background: $bg-btn;
+
+  }
+    & a {
+      color: $item-text !important;
+      font-weight: $font-bold;
+    }
+
+    & a:hover {
+      background: $bg-btn-hover;
+      color: $btn-text !important;
+      font-weight: $font-bold;
+    }
+
+}
+
+.top-logo {
+  background: $bg-logo;
+  color: $item-text;
+  text-align: center;
+  font-weight: $font-bold;
+  padding: .3rem 0;
+}
+
+.top-contacts {
+  text-align: right;
+  color: $font-light;
+
+  &__phone a {
+    color: $font-light;
+    font-weight: $font-bold;
+    font-size: 1.3rem;
+  }
+  & span {
+    color: black;
+    font-weight: 700;
+    font-size: 1.6rem;
+  }
+}
+
+.top-contacts p {
+  margin: .3rem 0 0 !important;
+}
+
+
+//верхний блок - баннер, открытия групп и акции
+.top-info {
+  background: $bg-block;
+
+  &__img img {
+    margin: 0 auto;
+  }
+
+  &__info {
+    background: $bg-block;
+
+    &__info-sale {
+      background: $bg-block-sale;
+      padding: 2rem;
+
+      .course-link a {
+        display: block;
+        padding: 4%;
+        background: $bg-btn;
+        color: $item-text;
+        font-weight: $font-bold;
+        font-size: 1.3rem;
+        text-align: center;
+        border-radius: .5rem;
+      }
+
+      & a:hover {
+        background: $bg-btn-hover;
+        color: #cb6211;
+      }
+
+      .text-sale {
+        margin: 1rem 0;
+        color: #b28a65;
+        font-weight: $font-bold;
+      }
+      & span {
+        color: red;
+      }
+
+    }
+
+    &__open-group {
+      padding: 2rem;
+
+      .open-group {
+        line-height: 1rem;
+
+        &__item {
+          margin: 2rem 0;
+
+          &__item-header {
+            color: $btn-text;
+            font-weight: $font-bold;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+//блок - популярные курсы
+.popular-courses__item {
+  padding: 2rem;
+
+  &-header span {
+    display: block;
+    padding: 1rem;
+    background: $bg-btn-hover;
+    text-align: center;
+    color: $btn-text;
+    font-weight: $font-bold;
+    font-size: 1.2rem;
+    border-radius: .3rem;
+    margin-bottom: 1.1rem;
+  }
+
+  &-link:hover {
+    text-decoration: none;
+    border-bottom: 1px solid $color-link;
+    color: $color-link;
+  }
+
+}
+
+
+//текст на главной странице - section main-info
+.main-info {
+  padding: 2rem;
+  background: $bg-block;
+}
+
+
+//aside
+.reviews {
+  margin-top: 1.5rem;
+
+  & .review-item {
+    margin: 2rem 0;
+
+    & .review-name {
+      font-size: 1rem;
+      font-weight: $font-bold;
+    }
+
+  }
+
+}
+
+//footer
+footer {
+  padding: 2rem 0;
+
+  & .footer-nav {
+    display: flex;
+
+    & .footer-nav-item {
+      margin-right: .7rem;
+    }
+  }
+}
+
+

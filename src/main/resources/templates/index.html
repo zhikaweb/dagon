@@ -1,0 +1,234 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Центр обучения бухгалтеров при Институте дополнительного образования</title>
+<!-- до 150 символов -->
+	<meta name="description" content="Приглашаем всех желающих пройти курсы бухгалтерского учета! Скидки до 30%, уникальные методики обучения бухучету!">
+    <meta name="copyright" content="Центр обучения бухгалтеров при Институте дополнительного образования">
+<!--  название веб-приложения  -->
+    <meta name="apple-mobile-web-app-title" content="Центр обучения бухгалтеров при Институте дополнительного образования">
+<!--  Полноэкранный режиим, минимизация верхнего окна браузера  -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../static/css/bootstrap.css" th:href="@{'/css/bootstrap.css'}">
+    <link rel="stylesheet" href="../static/css/bootstrap-grid.css" th:href="@{'/css/bootstrap-grid.css'}">
+    <!--  стили  -->
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{'/css/style.css'}">
+
+</head>
+<body>
+<div class="container wrapper">
+<!--  header  -->
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="top-logo"><span>Центр обучения бухгалтеров<br> при Институте дополнительного образования</span></div>
+                <nav class="navbar navbar-expand-lg navbar-light main-menu">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse main-menu__menu" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active active-link" href="#">Главная страница</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Курсы</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">О кафедре</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Отзывы</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-md-6 top-contacts">
+                <p>Мы работаем ежедневно с 9:00 до 21:30</p>
+                <div class="top-contacts__phone"><a href="tel:+7(495)150-46-07">+7 (495) <span>150-46-07</span></a></div>
+                <div class="top-contacts__phone"><a href="tel:+7(495)664-21-56">+7 (495) <span>664-21-56</span></a></div>
+                <a href="">Свяжитесь с нами</a>
+            </div>
+        </div>
+    </header>
+<!--  main  -->
+    <main class="container-fluid">
+        <div class="container-fluid top-info">
+            <div class="row col top-info__img"><img src="/img/main-pic.jpg" alt=""></div>
+            <section class="row top-info__info">
+                <div class="col-lg-4 col-md-4 top-info__info-sale">
+                    <div class="course-link"><a href="">Посмотреть курсы</a></div>
+                    <div class="text-sale">На нашей кафедре <span>до 29 ноября 2019 г.</span> действуют скидки до 30% на все курсы!</div>
+                </div>
+                <div class="col-lg-8 col-md-8 top-info__open-group">
+                    <h3 class="top-info__open-group-header">Открытия групп на кафедре</h3>
+                    <div class="open-group">
+                        <div class="open-group__item">
+                            <p class="open-group__item-header">Lorem ipsum dolor.</p>
+                            <p class="open-group__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, modi?</p>
+                        </div>
+                        <div class="open-group__item">
+                            <p class="open-group__item-header">Lorem ipsum dolor.</p>
+                            <p class="open-group__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, modi?</p>
+                        </div>
+                        <div class="open-group__item">
+                            <p class="open-group__item-header">Lorem ipsum dolor.</p>
+                            <p class="open-group__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, modi?</p>
+                        </div>
+                        <div class="open-group__item">
+                            <p class="open-group__item-header">Lorem ipsum dolor.</p>
+                            <p class="open-group__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, modi?</p>
+                        </div>
+                        <div class="open-group__item">
+                            <p class="open-group__item-header">Lorem ipsum dolor.</p>
+                            <p class="open-group__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, modi?</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section class="row popular-courses">
+            <div class="col-lg-4 col-md-4 popular-courses__item">
+                <div class="popular-courses__item-header">
+                    <span>Курсы для начинающих</span>
+                </div>
+                <ul>
+                    <li th:each="course : ${courses}"><a class="popular-courses__item-link" th:href="${course.title}" th:text="${course.title}"></a></li>
+                </ul>
+                <div class="popular-courses__all">
+                    <a class="popular-courses__item-link" href="">Курсы направления >></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 popular-courses__item">
+                <div class="popular-courses__item-header">
+                    <span>Курсы для профессионалов</span>
+                </div>
+                <ul>
+                    <li><a href="" class="popular-courses__item-link">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="" class="popular-courses__item-link">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="" class="popular-courses__item-link">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="" class="popular-courses__item-link">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="" class="popular-courses__item-link">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="" class="popular-courses__item-link">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="" class="popular-courses__item-link">Lorem ipsum dolor sit amet.</a></li>
+                </ul>
+                <div class="popular-courses__all">
+                    <a class="popular-courses__item-link" href="">Курсы направления >></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 popular-courses__item">
+                <div class="popular-courses__item-header">
+                    <span>Курсы 1С</span>
+                </div>
+                <ul>
+                    <li><a href="" class="popular-courses__item-link">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="" class="popular-courses__item-link">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="" class="popular-courses__item-link">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="" class="popular-courses__item-link">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="" class="popular-courses__item-link">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="" class="popular-courses__item-link">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="" class="popular-courses__item-link">Lorem ipsum dolor sit amet.</a></li>
+                </ul>
+                <div class="popular-courses__all">
+                    <a class="popular-courses__item-link" href="">Курсы направления >></a>
+                </div>
+            </div>
+        </section>
+        <div class="row">
+            <aside class="col-lg-4 col-md-4">
+                <img src="img/35-1222ban_serp-30newyear.png">
+                <div class="reviews">
+                    <h3>Отзывы</h3>
+                    <div class="review-item">
+                        <p class="review-name">Vasya1</p>
+                        <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, cupiditate
+                            distinctio earum harum modi numquam!</p>
+                    </div>
+                    <div class="review-item">
+                        <p class="review-name">Vasya2</p>
+                        <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, cupiditate
+                            distinctio earum harum modi numquam!</p>
+                    </div>
+                    <div class="review-item">
+                        <p class="review-name">Vasya3</p>
+                        <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, cupiditate
+                            distinctio earum harum modi numquam!</p>
+                    </div>
+                    <div class="review-item">
+                        <p class="review-name">Vasya4</p>
+                        <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, cupiditate
+                            distinctio earum harum modi numquam!</p>
+                    </div>
+                    <div class="review-item">
+                        <p class="review-name">Vasya5</p>
+                        <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, cupiditate
+                            distinctio earum harum modi numquam!</p>
+                    </div>
+                    <div class="review-item">
+                        <p class="review-name">Vasya6</p>
+                        <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, cupiditate
+                            distinctio earum harum modi numquam!</p>
+                    </div>
+                </div>
+            </aside>
+            <section class="col-lg-8 col-md-8 main-info">
+                <h3>Курсы бухгалтеров и 1С для начинающих и профессионалов</h3>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequatur dolorum esse harum iste omnis quam, tempora. Distinctio quae recusandae tempora! Ad beatae delectus deserunt, dolor dolore earum ex fugiat id, incidunt iusto maiores minima molestias nostrum nulla perferendis quia quidem quisquam rem repellendus sed sequi temporibus velit veniam voluptate.</p>
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consectetur deserunt dolores, eaque
+                        eius est ex explicabo facere facilis fugit id labore libero molestiae mollitia necessitatibus
+                        odit, omnis perferendis quod repellendus reprehenderit sequi ut veniam. At aut consequuntur
+                        eligendi eveniet, laudantium nihil placeat repellendus. Eveniet ipsam porro ratione vitae
+                        voluptatem!</p>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, modi.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, modi.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, modi.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, modi.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, modi.</li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A culpa cum dolores fugiat ipsum
+                        pariatur quaerat quas reprehenderit sit? Aliquid consequatur deleniti eveniet libero nobis, non
+                        odit omnis soluta vero!</p>
+                </div>
+            </section>
+        </div>
+    </main>
+<!--  footer  -->
+    <footer class="container-fluid">
+        <div class="row col copyright justify-content-center">Copyright 2019. &nbsp;Кафедра бухгалтерского учета при Институте дополнительного образования</div>
+        <div class="row col justify-content-center">
+            <ul class="footer-nav">
+                <li class="footer-nav-item"><a href="">Главная</a></li>
+                <li class="footer-nav-item"><a href="">Курсы</a></li>
+                <li class="footer-nav-item"><a href="">О кафедре</a></li>
+                <li class="footer-nav-item"><a href="">Отзывы</a></li>
+                <li class="footer-nav-item"><a href="">Контакты</a></li>
+                <li class="footer-nav-item"><a href="">Политика конфиденциальности</a></li>
+                <li class="footer-nav-item"><a href="">Пользовательское соглашение</a></li>
+            </ul>
+        </div>
+    </footer>
+</div>
+
+
+
+
+
+
+<!-- bootstrap -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script type="text/javascript" src="../static/js/bootstrap.js" th:src="@{'/js/bootstrap.js'}"></script>
+</body>
+</html>

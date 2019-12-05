@@ -1,0 +1,167 @@
+/* main properties */
+body {
+  background: #f4f4f4;
+}
+
+aside {
+  background: #e6e6e6;
+  padding: 2rem !important;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+
+/*  header */
+.main-menu {
+  margin: 1rem 0;
+}
+.main-menu .main-menu__menu ul li {
+  background: linear-gradient(to top, #9d4f17, #cb6211);
+}
+.main-menu .main-menu__menu ul li a {
+  color: #fff !important;
+  font-weight: 700;
+}
+.main-menu .main-menu__menu ul li a:hover {
+  background: linear-gradient(to top, #FBCF40, #f8e733);
+  color: #cb6211 !important;
+  font-weight: 700;
+}
+
+
+.top-logo {
+  background: #b5b5b5;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  padding: 0.3rem 0;
+}
+
+.top-contacts {
+  text-align: right;
+  color: #787878;
+}
+.top-contacts .top-contacts__phone a {
+  color: #787878;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+.top-contacts .top-contacts__phone a span {
+  color: black;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.top-contacts p {
+  margin: 0.3rem 0 0 !important;
+}
+
+
+/* верхний блок - баннер, открытия групп и акции */
+.top-info {
+  background: #fff;
+}
+.top-info .top-info__img img {
+  margin: 0 auto;
+}
+.top-info .top-info__info {
+  background: #fff;
+}
+.top-info .top-info__info .top-info__info-sale {
+  background: #F5EBDE;
+  padding: 2rem;
+}
+.top-info .top-info__info .top-info__info-sale .course-link a {
+  display: block;
+  padding: 4%;
+  background: linear-gradient(to top, #9d4f17, #cb6211);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+.top-info .top-info__info .top-info__info-sale .course-link a:hover {
+  background: linear-gradient(to top, #FBCF40, #f8e733);
+  color: #cb6211;
+}
+.top-info .top-info__info .top-info__info-sale .text-sale {
+  margin: 1rem 0;
+  color: #b28a65;
+  font-weight: 700;
+}
+.top-info .top-info__info .top-info__info-sale .text-sale span {
+  color: red;
+}
+.top-info .top-info__info .top-info__open-group {
+  padding: 2rem;
+}
+.top-info .top-info__info .top-info__open-group .open-group {
+  line-height: 1rem;
+}
+.top-info .top-info__info .top-info__open-group .open-group .open-group__item {
+  margin: 2rem 0;
+}
+.top-info .top-info__info .top-info__open-group .open-group .open-group__item .open-group__item-header {
+  color: #cb6211;
+  font-weight: 700;
+}
+
+
+/* блок - популярные курсы */
+.popular-courses__item {
+  padding: 2rem;
+}
+.popular-courses__item .popular-courses__item-header span {
+  display: block;
+  padding: 1rem;
+  background: linear-gradient(to top, #FBCF40, #f8e733);
+  text-align: center;
+  color: #cb6211;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  margin-bottom: 1.1rem;
+}
+.popular-courses__item .popular-courses__item-link:hover {
+  text-decoration: none;
+  border-bottom: 1px solid #007bff;
+  color: #007bff;
+}
+
+/* текст на главной странице - section main-info */
+.main-info {
+  padding: 2rem;
+  background: #fff;
+}
+
+/* aside */
+.reviews {
+  margin-top: 1.5rem;
+}
+.reviews .review-item {
+  margin: 2rem 0;
+}
+.reviews .review-item .review-name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* footer */
+footer {
+  padding: 2rem 0;
+}
+footer .footer-nav {
+  display: flex;
+}
+footer .footer-nav .footer-nav-item {
+  margin-right: 0.7rem;
+}
+
+/*# sourceMappingURL=style.css.map */
