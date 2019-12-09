@@ -1,68 +1,17 @@
 <!doctype html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Центр обучения бухгалтеров при Институте дополнительного образования</title>
-<!-- до 150 символов -->
-	<meta name="description" content="Приглашаем всех желающих пройти курсы бухгалтерского учета! Скидки до 30%, уникальные методики обучения бухучету!">
-    <meta name="copyright" content="Центр обучения бухгалтеров при Институте дополнительного образования">
-<!--  название веб-приложения  -->
-    <meta name="apple-mobile-web-app-title" content="Центр обучения бухгалтеров при Институте дополнительного образования">
-<!--  Полноэкранный режиим, минимизация верхнего окна браузера  -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="../static/css/bootstrap.css" th:href="@{'/css/bootstrap.css'}">
-    <link rel="stylesheet" href="../static/css/bootstrap-grid.css" th:href="@{'/css/bootstrap-grid.css'}">
-    <!--  стили  -->
-    <link rel="stylesheet" href="../static/css/style.css" th:href="@{'/css/style.css'}">
-
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head th:replace="~{head :: headTags}">
 </head>
 <body>
 <div class="container wrapper">
 <!--  header  -->
-    <header class="container-fluid">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="top-logo"><span>Центр обучения бухгалтеров<br> при Институте дополнительного образования</span></div>
-                <nav class="navbar navbar-expand-lg navbar-light main-menu">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse main-menu__menu" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a class="nav-link active active-link" href="#">Главная страница</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Курсы</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">О кафедре</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Отзывы</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Контакты</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-            <div class="col-md-6 top-contacts">
-                <p>Мы работаем ежедневно с 9:00 до 21:30</p>
-                <div class="top-contacts__phone"><a href="tel:+7(495)150-46-07">+7 (495) <span>150-46-07</span></a></div>
-                <div class="top-contacts__phone"><a href="tel:+7(495)664-21-56">+7 (495) <span>664-21-56</span></a></div>
-                <a href="">Свяжитесь с нами</a>
-            </div>
-        </div>
+    <header class="container-fluid" th:replace="~{header :: header}">
     </header>
 <!--  main  -->
     <main class="container-fluid">
+<!--    top banner and news-block    -->
         <div class="container-fluid top-info">
-            <div class="row col top-info__img"><img src="/img/main-pic.jpg" alt=""></div>
+            <div class="row col top-info__img d-none d-lg-block"><img src="/img/main-pic.jpg" alt="курсы бухгалтерского учета" class="w-100"></div>
             <section class="row top-info__info">
                 <div class="col-lg-4 col-md-4 top-info__info-sale">
                     <div class="course-link"><a href="">Посмотреть курсы</a></div>
@@ -95,21 +44,23 @@
                 </div>
             </section>
         </div>
+<!--    /top banner and news-block    -->
+<!--    popular courses    -->
         <section class="row popular-courses">
-            <div class="col-lg-4 col-md-4 popular-courses__item">
+            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 popular-courses__item">
                 <div class="popular-courses__item-header">
-                    <span>Курсы для начинающих</span>
+                    <h4>Курсы для начинающих</h4>
                 </div>
                 <ul>
-                    <li th:each="course : ${courses}"><a class="popular-courses__item-link" th:href="${course.title}" th:text="${course.title}"></a></li>
+                    <li th:each="course : ${courses}"><a class="popular-courses__item-link" th:href="${course.link}" th:text="${course.title}"></a></li>
                 </ul>
                 <div class="popular-courses__all">
                     <a class="popular-courses__item-link" href="">Курсы направления >></a>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 popular-courses__item">
+            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 popular-courses__item">
                 <div class="popular-courses__item-header">
-                    <span>Курсы для профессионалов</span>
+                    <h4>Курсы для профессионалов</h4>
                 </div>
                 <ul>
                     <li><a href="" class="popular-courses__item-link">Lorem ipsum dolor sit amet.</a></li>
@@ -124,9 +75,9 @@
                     <a class="popular-courses__item-link" href="">Курсы направления >></a>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 popular-courses__item">
+            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 popular-courses__item">
                 <div class="popular-courses__item-header">
-                    <span>Курсы 1С</span>
+                    <h4>Курсы 1С</h4>
                 </div>
                 <ul>
                     <li><a href="" class="popular-courses__item-link">Lorem ipsum dolor sit amet.</a></li>
@@ -142,9 +93,11 @@
                 </div>
             </div>
         </section>
+<!--    /popular courses    -->
+<!--    aside    -->
         <div class="row">
-            <aside class="col-lg-4 col-md-4">
-                <img src="img/35-1222ban_serp-30newyear.png">
+            <aside class="col-lg-4 col-md-4 d-none d-lg-block">
+                <img src="img/35-1222ban_serp-30newyear.png" alt="баннер">
                 <div class="reviews">
                     <h3>Отзывы</h3>
                     <div class="review-item">
@@ -179,8 +132,10 @@
                     </div>
                 </div>
             </aside>
-            <section class="col-lg-8 col-md-8 main-info">
-                <h3>Курсы бухгалтеров и 1С для начинающих и профессионалов</h3>
+<!--     /aside       -->
+<!--      main section      -->
+            <article class="col-lg-8 col-md-12 main-info">
+                <h1>Курсы бухгалтеров и 1С для начинающих и профессионалов</h1>
                 <div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequatur dolorum esse harum iste omnis quam, tempora. Distinctio quae recusandae tempora! Ad beatae delectus deserunt, dolor dolore earum ex fugiat id, incidunt iusto maiores minima molestias nostrum nulla perferendis quia quidem quisquam rem repellendus sed sequi temporibus velit veniam voluptate.</p>
                 </div>
@@ -201,27 +156,15 @@
                         pariatur quaerat quas reprehenderit sit? Aliquid consequatur deleniti eveniet libero nobis, non
                         odit omnis soluta vero!</p>
                 </div>
-            </section>
+            </article>
+<!--     /main section       -->
         </div>
     </main>
 <!--  footer  -->
-    <footer class="container-fluid">
-        <div class="row col copyright justify-content-center">Copyright 2019. &nbsp;Кафедра бухгалтерского учета при Институте дополнительного образования</div>
-        <div class="row col justify-content-center">
-            <ul class="footer-nav">
-                <li class="footer-nav-item"><a href="">Главная</a></li>
-                <li class="footer-nav-item"><a href="">Курсы</a></li>
-                <li class="footer-nav-item"><a href="">О кафедре</a></li>
-                <li class="footer-nav-item"><a href="">Отзывы</a></li>
-                <li class="footer-nav-item"><a href="">Контакты</a></li>
-                <li class="footer-nav-item"><a href="">Политика конфиденциальности</a></li>
-                <li class="footer-nav-item"><a href="">Пользовательское соглашение</a></li>
-            </ul>
-        </div>
+    <footer class="container-fluid" th:replace="~{footer :: footer}">
+
     </footer>
 </div>
-
-
 
 
 
@@ -229,6 +172,6 @@
 <!-- bootstrap -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script type="text/javascript" src="../static/js/bootstrap.js" th:src="@{'/js/bootstrap.js'}"></script>
+<script src="../static/js/bootstrap.js" th:src="@{'/js/bootstrap.js'}"></script>
 </body>
 </html>

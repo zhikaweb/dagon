@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+
+<header class="container-fluid" th:fragment="header">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="top-logo"><span>Центр обучения бухгалтеров<br> при Институте дополнительного образования</span></div>
+            <div th:replace="~{navigation :: navigation(activeTab)}"></div>
+        </div>
+        <div class="col-md-6 top-contacts">
+            <p>Мы работаем ежедневно с 9:00 до 21:30</p>
+            <div class="top-contacts__phone"><a href="tel:+7(495)150-46-07">+7 (495) <span>150-46-07</span></a></div>
+            <div class="top-contacts__phone"><a href="tel:+7(495)664-21-56">+7 (495) <span>664-21-56</span></a></div>
+            <a href="">Свяжитесь с нами</a>
+        </div>
+    </div>
+</header>
+
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head th:replace="~{head :: headTags}">
+
+</head>
+<body>
+<div class="container wrapper">
+<!--  header  -->
+    <header class="container-fluid" th:replace="~{header :: header}">
+    </header>
+<!--  main  -->
+    <main class="container-fluid bg-white py-3">
+<!--    breadcrumbs    -->
+        <div class="breadcrumbs">
+            <ul class="d-flex">
+                <li><a href="/">Главная</a></li>
+                <li class="mx-2">/</li>
+                <li><a href="">Курсы</a></li>
+                <li class="mx-2">/</li>
+                <li>Курсы бухгалтеров с нуля</li>
+            </ul>
+        </div>
+<!--   /breadcrumbs     -->
+<!--   block info-price     -->
+        <section class="container p-3 info-price">
+            <div class="row col-12 justify-content-center">
+                <h1>Курсы бухгалтеров для начинающих</h1>
+            </div>
+            <div class="row my-3">
+                <div class="col-md-5 cost-course">
+                    <img src="img/buh.jpg" alt="бухгалтерские курсы">
+                    <div class="group-cost my-4">
+                        <h6><strong>Обучение в группе:</strong></h6>
+                        <p>Стоимость <span><s>12750 р.</s></span><span><strong> 8000 р.</strong></span></p>
+                    </div>
+                    <div class="individ-cost my-4">
+                        <h6><strong>Индивидуальное обучение:</strong></h6>
+                        <p>Стоимость <span><strong>25000 р.</strong></span></p>
+                    </div>
+                    <div class="course-link w-50"><a href="">Записаться</a>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="bg-secondary time text-light p-3">
+                        <h6><strong>Время и график занятий:</strong></h6>
+                        <p>Длительность обучения <span><strong>52 академ.часа(ов)</strong></span></p>
+                        <ul>
+                            <li>утренние группы с 9:00 до 12:00</li>
+                            <li>дневные группы: с 12:00 до 15:00</li>
+                            <li>вечерние группы: с 18:30 до 21:30</li>
+                            <li>группы выходного дня: с 10:00 до 19:00</li>
+                        </ul>
+                    </div>
+                    <div class="time p-3 mt-3">
+                        <h6><strong>Места обучения:</strong></h6>
+                        <ul>
+                            <li>м. Серпуховская</li>
+                            <li>м. Таганская</li>
+                            <li>м. Октябрьская</li>
+                            <li>м. Сокол</li>
+                        </ul>
+                        <p><sup>*</sup> Вы можете позвонить и уточнить другие места обучения</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!--    block info-timetable    -->
+        <section class="container shadow p-3 information">
+            <div class="row">
+                <div class="col-md-5 info-place">
+                    <h5>Адрес и график занятий</h5>
+                    <div class="info-place__inner d-flex mt-4 align-items-center">
+                        <div class="info-place__inner-ico mr-3"><img src="/img/amap.png" alt=""></div>
+                        <div class="info-place__inner-text">г. Москва, м. Серпуховская <a href="">(схема проезда)</a></div>
+                    </div>
+                    <div class="info-place__inner d-flex my-4 align-items-center">
+                        <div class="info-place__inner-ico mr-3"><img src="/img/atel.png" alt=""></div>
+                        <div class="info-place__inner-text"><a href="tel:+7(495)150-46-07">+7 (495) 150-46-07</a></div>
+                    </div>
+                    <div class="info-place__inner d-flex align-items-center">
+                        <div class="info-place__inner-ico mr-3"><img src="/img/amail.png" alt=""></div>
+                        <div class="info-place__inner-text"><a href="mailto:">Обратная связь</a></div>
+                    </div>
+<!--                    <div class="img-enrollment"><img src="/img/btn-4-pic.png" alt="счеты"></div>-->
+                </div>
+                <div class="col-md-7 timetable">
+                    <h6><strong>Начало занятий <sup>*</sup></strong></h6>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Дата</th>
+                                <th scope="col">Время</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-primary">
+                                <td>11.12.2019</td>
+                                <td>12-00-15:00 / 15-00-18:00</td>
+                            </tr>
+                            <tr>
+                                <td>11.12.2019</td>
+                                <td>9:00-12:00</td>
+                            </tr>
+                            <tr class="table-primary">
+                                <td>11.12.2019</td>
+                                <td>9:00-12:00</td>
+                            </tr>
+                            <tr>
+                                <td>11.12.2019</td>
+                                <td>12-00-15:00 / 15-00-18:00</td>
+                            </tr>
+                            <tr class="table-primary">
+                                <td>11.12.2019</td>
+                                <td>12-00-15:00 / 15-00-18:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><sup>* </sup>Может корректироваться</p>
+                </div>
+            </div>
+        </section>
+<!--    programm    -->
+        <section class="container p-3">
+            <div class="row">
+                <div class="col-12 mt-4 programm">
+                    <h3>Программа обучения</h3>
+                    <div class="text-dark">
+                        <ul>
+                            <li class="mb-2"><strong>Lorem ipsum dolor sit amet.</strong>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                                </ul>
+                            </li>
+                            <li class="mb-2"><strong>Lorem ipsum dolor sit amet.</strong>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                                </ul>
+                            </li>
+                            <li class="mb-2"><strong>Lorem ipsum dolor sit amet.</strong>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                                </ul>
+                            </li>
+                            <li class="mb-2"><strong>Lorem ipsum dolor sit amet.</strong>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                                </ul>
+                            </li>
+                            <li class="mb-2"><strong>Lorem ipsum dolor sit amet.</strong>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container enrollment">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="course-link"><a href="">Записаться</a></div>
+                </div>
+                <div class="col-md-9 row justify-content-center align-items-center">
+                    <div class="enrollment__ico"><img src="/img/info-64.png" alt="связвться с нами"></div>
+                    <div class="enrollment__phone mx-3"><a href="tel:+7(495)150-46-07">+7 (495) 150-46-07</a></div>
+                    <div class="enrollment__link"><a href="">Наши контакты</a></div>
+                </div>
+            </div>
+        </div>
+        <section class="container p-3">
+            <div class="row">
+                <div class="col-12 p-3 text-dark annotation">
+                    <h3>Описание курса</h3>
+                    <div class="annotation-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda beatae cupiditate
+                            dignissimos distinctio doloribus eius, eum harum incidunt laborum libero non officiis optio
+                            quas quasi quo quos reprehenderit sequi ullam!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda beatae cupiditate
+                            dignissimos distinctio doloribus eius, eum harum incidunt laborum libero non officiis optio
+                            quas quasi quo quos reprehenderit sequi ullam!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda beatae cupiditate
+                            dignissimos distinctio doloribus eius, eum harum incidunt laborum libero non officiis optio
+                            quas quasi quo quos reprehenderit sequi ullam!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="form-comment p-3 bg-light">
+            <h3>Оставить свой отзыв</h3>
+            <form>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="validationCustom01">Имя</label>
+                            <input type="text" class="form-control" id="validationCustom01" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="invalid-feedback">
+                            Введите имя
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="validationCustom02">E-mail</label>
+                            <input type="email" class="form-control" id="validationCustom02" placeholder="name@example.com" required>
+                        </div>
+                        <div class="invalid-feedback">
+                            Введите e-mail
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Сообщение</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                            Согласен на всё!
+                        </label>
+                        <div class="invalid-feedback">
+                            Вы должны согласиться на всё.
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Отправить</button>
+            </form>
+        </section>
+        <section class="comments p-3">
+            <h4>Комментарии пользователей</h4>
+            <p class="text-info">Пока никто ничего не написал... Пичалька...</p>
+        </section>
+
+    </main>
+
+<!--  footer  -->
+    <footer class="container-fluid" th:replace="~{footer :: footer}">
+    </footer>
+</div>
+
+<!-- bootstrap -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="../static/js/bootstrap.js" th:src="@{'/js/bootstrap.js'}"></script>
+</body>
+</html>

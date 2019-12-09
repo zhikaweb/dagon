@@ -22,12 +22,18 @@ public class MainController {
         this.courseService = courseService;
     }
 
-    //доступ к главной станице
+    //доступ к главной странице
     @GetMapping("/")
     public String homePage(Model model) {
         List<Course> allCourses = courseService.getAllCourses();
         model.addAttribute("courses", allCourses);
         return "index";
+    }
+
+    //доступ к внутренней странице курса
+    @GetMapping("/course")
+    public String coursePage() {
+        return "course-inner-page";
     }
 
 }
