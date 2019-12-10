@@ -5,12 +5,15 @@ public class Course {
 
     private int id;
 
+    //название для сайта
     private String title;
 
+    //аббревиатура Карбух
     private String abbr;
 
     private int price;
 
+    //чпу - ссылка на страницу курса
     private String link;
 
     //геттеры и сеттеры
