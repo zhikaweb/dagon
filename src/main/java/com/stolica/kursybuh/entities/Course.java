@@ -1,20 +1,57 @@
 package com.stolica.kursybuh.entities;
 
+import javax.persistence.*;
+
 //класс курсов и его поля - айди, название, аббрев, цена, ссылка и.т.д
+@Entity
+@Table(name = "course", schema = "dagon_data", catalog = "")
 public class Course {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id;
 
-    //название для сайта
+    //название курса
+    @Column(name = "title")
     private String title;
 
     //аббревиатура Карбух
+    @Column(name = "abbr")
     private String abbr;
 
-    private int price;
+    //проверка курс или семинар
+    @Column(name = "isCourse")
+    private boolean isCourse;
+
+    //проверка на модуль
+    @Column(name = "isModule")
+    private boolean isModule;
+
+    //ак.часы
+    @Column(name = "time")
+    private int time;
+
+    //айди категории
+    @Column(name = "categoryId")
+    private int categoryId;
+
+    //айди документа об обучении
+    @Column(name = "giplomaId")
+    private int diplomaId;
+
+    //айди Карбуха
+    @Column(name = "karbuhId")
+    private int karbuhId;
+
+    //айди присваеваемой квалификации
+    @Column(name = "qualificationId")
+    private int qualificationId;
 
     //чпу - ссылка на страницу курса
+    @Column(name = "link")
     private String link;
+
 
     //геттеры и сеттеры
     public int getId() {
@@ -41,12 +78,60 @@ public class Course {
         this.abbr = abbr;
     }
 
-    public int getPrice() {
-        return price;
+    public boolean isCourse() {
+        return isCourse;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public void setCourse(boolean course) {
+        isCourse = course;
+    }
+
+    public boolean isModule() {
+        return isModule;
+    }
+
+    public void setModule(boolean module) {
+        isModule = module;
+    }
+
+    public int getTime() {
+        return time;
+    }
+
+    public void setTime(int time) {
+        this.time = time;
+    }
+
+    public int getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
+    }
+
+    public int getDiplomaId() {
+        return diplomaId;
+    }
+
+    public void setDiplomaId(int diplomaId) {
+        this.diplomaId = diplomaId;
+    }
+
+    public int getKarbuhId() {
+        return karbuhId;
+    }
+
+    public void setKarbuhId(int karbuhId) {
+        this.karbuhId = karbuhId;
+    }
+
+    public int getQualificationId() {
+        return qualificationId;
+    }
+
+    public void setQualificationId(int qualificationId) {
+        this.qualificationId = qualificationId;
     }
 
     public String getLink() {
@@ -57,18 +142,25 @@ public class Course {
         this.link = link;
     }
 
+
     //пустой дефолтный конструктор
-    public Course(){
+    public Course() {
 
     }
 
+
     //и конструктор, который задает сразу все поля
-    public Course(int id, String title, String abbr, int price, String link) {
+    public Course(int id, String title, String abbr, boolean isCourse, boolean isModule, int time, int categoryId, int diplomaId, int karbuhId, int qualificationId, String link) {
         this.id = id;
         this.title = title;
         this.abbr = abbr;
-        this.price = price;
+        this.isCourse = isCourse;
+        this.isModule = isModule;
+        this.time = time;
+        this.categoryId = categoryId;
+        this.diplomaId = diplomaId;
+        this.karbuhId = karbuhId;
+        this.qualificationId = qualificationId;
         this.link = link;
     }
-
 }
