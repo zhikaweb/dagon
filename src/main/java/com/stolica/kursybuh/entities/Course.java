@@ -21,11 +21,11 @@ public class Course {
     private String abbr;
 
     //проверка курс или семинар
-    @Column(name = "isCourse")
+    @Column(name = "is_course")
     private boolean isCourse;
 
     //проверка на модуль
-    @Column(name = "isModule")
+    @Column(name = "is_module")
     private boolean isModule;
 
     //ак.часы
@@ -33,19 +33,19 @@ public class Course {
     private int time;
 
     //айди категории
-    @Column(name = "categoryId")
+    @Column(name = "category_id")
     private int categoryId;
 
     //айди документа об обучении
-    @Column(name = "giplomaId")
+    @Column(name = "diploma_id")
     private int diplomaId;
 
     //айди Карбуха
-    @Column(name = "karbuhId")
+    @Column(name = "karbuh_id")
     private int karbuhId;
 
     //айди присваеваемой квалификации
-    @Column(name = "qualificationId")
+    @Column(name = "qualification_id")
     private int qualificationId;
 
     //чпу - ссылка на страницу курса
@@ -163,4 +163,11 @@ public class Course {
         this.qualificationId = qualificationId;
         this.link = link;
     }
+
+    //вывод инфы о курсе в консоль!!!
+    @Override
+    public String toString(){
+        return String.format("Course: [id = %d, title = %s, abbr = %s, is_course = %b, is_module = %b, time = %d, category_id = %d, diploma_id = %d, karbuh_id = %d, qualification_id = %d, link = %s]", id, title, abbr, isCourse, isModule, time, categoryId, diplomaId, karbuhId, qualificationId, link);
+    }
+
 }

@@ -22,7 +22,7 @@ public class CourseService {
 
     //пишем сервису возможность предоставлять список курсов с запросом у репозитория
     public List<Course> getAllCourses() {
-        return courseRepository.getCourse();
+        return courseRepository.findAll();
     }
 
     //ищем курс по айди
