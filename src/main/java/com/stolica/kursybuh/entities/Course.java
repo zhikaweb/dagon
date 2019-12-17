@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 //класс курсов и его поля - айди, название, аббрев, цена, ссылка и.т.д
 @Entity
-@Table(name = "course", schema = "dagon_data", catalog = "")
+@Table(name = "courses", schema = "dagon_data", catalog = "")
 public class Course {
 
     @Id
@@ -166,7 +166,7 @@ public class Course {
     //вывод инфы о курсе в консоль!!!
     @Override
     public String toString(){
-        return String.format("Course: [id = %d, title = %s, abbr = %s, is_course = %b, is_module = %b, duration = %d, category_id = %d, diploma_id = %d, karbuh_id = %d, qualification_id = %d, basic_price = %s]", id, title, abbr, isCourse, isModule, duration, categoryId, diplomaId, karbuhId, qualificationId, basicPrice);
+        return String.format("Courses: [id = %d, title = %s, abbr = %s, is_course = %b, is_module = %b, duration = %d, category_id = %d, diploma_id = %d, karbuh_id = %d, qualification_id = %d, basic_price = %s]", id, title, abbr, isCourse, isModule, duration, categoryId, diplomaId, karbuhId, qualificationId, basicPrice);
     }
 
 }
