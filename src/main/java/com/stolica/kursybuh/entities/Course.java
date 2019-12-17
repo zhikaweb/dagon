@@ -29,8 +29,8 @@ public class Course {
     private boolean isModule;
 
     //ак.часы
-    @Column(name = "time")
-    private int time;
+    @Column(name = "duration")
+    private int duration;
 
     //айди категории
     @Column(name = "category_id")
@@ -48,9 +48,6 @@ public class Course {
     @Column(name = "qualification_id")
     private int qualificationId;
 
-    //чпу - ссылка на страницу курса
-    @Column(name = "link")
-    private String link;
 
 
     //геттеры и сеттеры
@@ -95,11 +92,11 @@ public class Course {
     }
 
     public int getTime() {
-        return time;
+        return duration;
     }
 
-    public void setTime(int time) {
-        this.time = time;
+    public void setTime(int duration) {
+        this.duration = duration;
     }
 
     public int getCategoryId() {
@@ -134,13 +131,7 @@ public class Course {
         this.qualificationId = qualificationId;
     }
 
-    public String getLink() {
-        return link;
-    }
 
-    public void setLink(String link) {
-        this.link = link;
-    }
 
 
     //пустой дефолтный конструктор
@@ -150,24 +141,23 @@ public class Course {
 
 
     //и конструктор, который задает сразу все поля
-    public Course(int id, String title, String abbr, boolean isCourse, boolean isModule, int time, int categoryId, int diplomaId, int karbuhId, int qualificationId, String link) {
+    public Course(int id, String title, String abbr, boolean isCourse, boolean isModule, int duration, int categoryId, int diplomaId, int karbuhId, int qualificationId) {
         this.id = id;
         this.title = title;
         this.abbr = abbr;
         this.isCourse = isCourse;
         this.isModule = isModule;
-        this.time = time;
+        this.duration = duration;
         this.categoryId = categoryId;
         this.diplomaId = diplomaId;
         this.karbuhId = karbuhId;
         this.qualificationId = qualificationId;
-        this.link = link;
     }
 
     //вывод инфы о курсе в консоль!!!
     @Override
     public String toString(){
-        return String.format("Course: [id = %d, title = %s, abbr = %s, is_course = %b, is_module = %b, time = %d, category_id = %d, diploma_id = %d, karbuh_id = %d, qualification_id = %d, link = %s]", id, title, abbr, isCourse, isModule, time, categoryId, diplomaId, karbuhId, qualificationId, link);
+        return String.format("Course: [id = %d, title = %s, abbr = %s, is_course = %b, is_module = %b, duration = %d, category_id = %d, diploma_id = %d, karbuh_id = %d, qualification_id = %d, link = %s]", id, title, abbr, isCourse, isModule, duration, categoryId, diplomaId, karbuhId, qualificationId);
     }
 
 }
